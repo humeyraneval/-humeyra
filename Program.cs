@@ -1,41 +1,25 @@
 ﻿using System;
 
-namespace hata_ayıklama
+namespace if_else_if
 {
     class Program
     {
         static void Main(string[] args)
         {
-           /* try
-            {
-              Console.WriteLine("Lütfen bir sayı giriniz.");
-              int a = Convert.ToInt32(Console.ReadLine());
-              Console.WriteLine("Girdiğiniz sayı:" + a);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Yanlış bir ifade girdiniz.");
-                Console.WriteLine("Hata:" + ex);
-             
-            }*/
-            try
-            {
-                //int a = int.Parse(null);
-                int a = int.Parse("kırmızı");
+            int time = DateTime.Now.Hour;
 
-            }
-            catch(ArgumentNullException ex)
-            {
-                Console.WriteLine("Boş değer girdiniz.");
-                Console.WriteLine("hata:" + ex);
-            }   
-            catch(FormatException ex)
-            {
-                Console.WriteLine("Yanlı fortmatta bir değer girdinzi.");
-                Console.WriteLine("hata:" + ex);
+            if(time>=6 && time<11)
+               Console.WriteLine("Günaydın!");
+            else if(time<=18)
+               Console.WriteLine("İyi Günler!");
+            else
+               Console.WriteLine("İyi Geceler!");
 
-            }
-        
+            string sonuc = time<18 ? "İyi günler." : "İyi geceler.";
+
+            sonuc = time>=6 && time<11 ? "Günaydın" : time<=18 ? "İyi günler" : "İyi geceler";
+            Console.WriteLine(sonuc);    
+
         }
     }
 }
