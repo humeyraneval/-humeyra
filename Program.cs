@@ -1,25 +1,46 @@
 ﻿using System;
 
-namespace if_else_if
+namespace foor_loop
 {
-    class Program
+    internal class NewBaseType
     {
         static void Main(string[] args)
         {
-            int time = DateTime.Now.Hour;
+            //Ekrana girilen sayıya kadar olan tek sayıları yazdırma.
+            /*  Console.WriteLine("Lütfen bira sayı giriniz:");
+              int sayac =int.Parse(Console.ReadLine());
+              for (int i = 1; i <= sayac; i++)
+              {
 
-            if(time>=6 && time<11)
-               Console.WriteLine("Günaydın!");
-            else if(time<=18)
-               Console.WriteLine("İyi Günler!");
-            else
-               Console.WriteLine("İyi Geceler!");
+                  if(i % 2 ==1)
+                  Console.WriteLine(i);
+              }
 
-            string sonuc = time<18 ? "İyi günler." : "İyi geceler.";
-
-            sonuc = time>=6 && time<11 ? "Günaydın" : time<=18 ? "İyi günler" : "İyi geceler";
-            Console.WriteLine(sonuc);    
+              //1'den 1000'e kadar olan tek ve çift sayıların toplamı 
+              int tekToplam = 0;
+              int cifttoplam = 0;
+              for (int i = 1; i <= 1000; i++)
+              {
+                  if(i % 2 == 1)
+                    tekToplam += i; //tekToplam = tekToplam + i;
+                  else
+                    cifttoplam += i; //ciftToplam = ciftToplam +i;  
+              }
+              Console.WriteLine("TekToplam: " + tekToplam);
+              Console.WriteLine("ÇİftToplam: " + cifttoplam);*/
+            for (int i = 1; i < 10; i++)
+            {
+                if (i == 4)
+                    break;
+                Console.WriteLine(i);
+            }
+            for (int i = 1; i < 10; i++)
+            {
+                if (i == 4)
+                    continue;
+                Console.WriteLine(i);
+            }
 
         }
     }
-}
+} 
